@@ -4,24 +4,45 @@
 <head>
     <title>Search result</title>
     <style>
-        form{
-            text-align:center;
-            color: green;
-            font-size: 2em;
+        body{
+
         }
+        #big>a{
+            text-align:left;
+            color: green;
+            font-size: 1.5em;
+        }
+        #search{
+          float: right;
+         }
+        #video{
+          float: right;
+
+        }
+
         a{
             text-decoration: none;
-        }
+          }
 
     </style>
 </head>
 <body>
-    <form>
+
+    <div id="search">
+          <input type="search" name="search" style="width: 300px;  height: 30px;" />
+          <input type="button" value="Search" style="height: 30px;" />
+    </div>
+    <div id="big">
         <a href="JNU wiki Homepage.html"><h1>JNU wiki</h1></a>
-    </form>
+    </div>
     <hr />
     <h1>Department of Computational Statistics</h1><hr />
     <br />
+    <div id="video">
+    <video controls="controls" width="640" height="360">
+        <source src="20191016programming.mp4" type="video/mp4"/>
+    </video>
+    </div>
     <h2>Table of contents</h2>
     <a href="#Major"><h3>1. Major Subject</h3></a>
     <a href="#Statistics">1-1. Statistic Mathematics</a><br />
@@ -106,9 +127,6 @@
     <hr />
     <br />
     <br />
-    <form>
-        <input type="search" name="search" style="width: 600px;  height: 30px;" />
-        <input type="button" value="Search" style="height: 30px;" />
-    </form>
+
 </body>
 </html>
