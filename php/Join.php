@@ -1,52 +1,8 @@
 <HTML>
 <HEAD>
-<META NAME="GENERATOR" Content="text/html"; charset="utf-8">
-
+<meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/jnujoin.css">
 <TITLE>JNU wiki Join</TITLE>
-<style>
-    h1{
-        color:forestgreen;
-        text-align:center;
-        font-size:60px;
-    }
-    h2{
-        color:coral;
-        text-align:center;
-        font-size:40px;
-    }
-    form{
-        text-align:center;
-    }
-    input{
-        width:400px;
-        height:40px;
-        font-size:20px;
-    }
-    a{
-        width:150px;
-        height:50px;
-
-        color:white;
-        background-color:green;
-        text-align:center;
-        font-size:30px;
-        text-decoration:none;
-        position:center;
-    }
-
-    #pw1{
-        margin-right:45px;
-    }
-    #pw2{
-        margin-right:95px;
-    }
-    #name{
-        margin-right:30px;
-    }
-    #birth{
-        margin-right:100px;
-    }
-</style>
 </HEAD>
 <BODY>
     <br/><br/>

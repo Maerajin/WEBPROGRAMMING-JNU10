@@ -1,38 +1,8 @@
 <HTML>
 <HEAD>
-<META NAME="GENERATOR" Content="text/html"; charset="utf-8">
-
+<meta http-equiv="Content-Type" Content="text/html"; charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/jnulogin.css">
 <TITLE>JNU wiki Login</TITLE>
-<style>
-    h1{
-        text-align:center;
-        font-size:80px;
-        color:green;
-    }
-    h2{
-        text-align:center;
-        font-size:40px;
-        color:cornflowerblue;
-    }
-    form{
-          text-align:center;
-    }
-    .button{
-        width:500px;
-        height:60px;
-        font-size:25px;
-        background-color:cyan;
-        border:3px solid skyblue;
-    }
-    .button>a{
-        display:block;
-        line-height:50px;
-        position:center;
-    }
-    a{
-      text-decoration: none;
-    }
-</style>
 </HEAD>
 <BODY>
     <br/><br/><br/><br/>

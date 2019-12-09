@@ -1,30 +1,9 @@
 ﻿<!DOCTYPE html>
-
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html"; chsrset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/jnusr.css">
     <title>Search result</title>
-    <style>
-        body{
-
-        }
-        #big>a{
-            text-align:left;
-            color: green;
-            font-size: 1.5em;
-        }
-        #search{
-          float: right;
-         }
-        #video{
-          float: right;
-
-        }
-
-        a{
-            text-decoration: none;
-          }
-
-    </style>
 </head>
 <body>
 

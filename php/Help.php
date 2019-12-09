@@ -1,19 +1,9 @@
 ﻿<!DOCTYPE html>
-
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/jnuhelp.css>
     <title>Help</title>
-    <style>
-        form {
-            text-align: center;
-            color: green;
-            font-size: 2em;
-        }
-
-        a {
-            text-decoration: none;
-        }
-    </style>
 </head>
 <body>
     <form> 

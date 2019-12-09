@@ -1,26 +1,11 @@
-﻿<!DOCTYPE html>
-
-<html>
+﻿<!DOCTYPE HTML>
+<HTML>
 <head>
+    <meta http-equiv="Cotent-Type" content="text/html"; charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/jnuesr.css">
     <title>No Search Result</title>
-    <style>
-        #big{
-            text-align:left;
-            color: green;
-            font-size: 1.5em;
-        }
-        #search{
-          float: right;
-        }
-        a{
-            text-decoration: none;
-            color: green;
-        }
-
-    </style>
 </head>
 <body>
-
     <div id="search">
           <input type="search" name="search" style="width: 300px;  height: 30px;" />
           <input type="button" value="Search" style="height: 30px;" />
