@@ -26,7 +26,7 @@
           <input type="button" value="Search" style="height: 30px;" />
     </div>
     <div id="big">
-        <a href="JNU wiki Homepage.html"><h1>JNU wiki</h1></a>
+        <a href="Homepage.php"><h1>JNU wiki</h1></a>
     </div>
     <hr />
     <h2>There is no search result.</h2><hr />

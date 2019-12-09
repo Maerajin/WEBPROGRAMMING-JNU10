@@ -1,7 +1,8 @@
 <HTML>
 <HEAD>
-<META NAME="GENERATOR" Content="Microsoft Visual Studio">
-<TITLE>JNU wiki 로그인</TITLE>
+<META NAME="GENERATOR" Content="text/html"; charset="utf-8">
+
+<TITLE>JNU wiki Login</TITLE>
 <style>
     h1{
         text-align:center;
@@ -28,23 +29,28 @@
         line-height:50px;
         position:center;
     }
+    a{
+      text-decoration: none;
+    }
 </style>
 </HEAD>
 <BODY>
     <br/><br/><br/><br/>
-    <h1>JNU wiki</h1>
-    <h2>로그인</h2>
+    <a href="Homepage.php"><h1>JNU wiki</h1></a>
+    <h2>Login</h2>
     <hr/>
     <form>
         <input name="id" type="text" placeholder="ID" style="width:500px; height:50px; border:3px solid blue; font-size:20px"/>
         <br/>
-        <input name="pw" type="password" placeholder="비밀번호" style="width:500px; height:50px; border:3px solid blue; font-size:20px"/>
+        <input name="pw" type="password" placeholder="Password" style="width:500px; height:50px; border:3px solid blue; font-size:20px"/>
         <br/>
-        <input type="submit" value="로그인" style="width:500px; height:30px; color:orangered; background-color:greenyellow;"/>
-    
-    <div class="button">
-        <a href="JNU wiki 회원가입.html" style="text-align:center; text-decoration:none; color:cornflowerblue; position:center;">신규 회원가입</a>
-    </div>
+        <input type="submit" value="Login" style="width:500px; height:30px; color:orangered; background-color:greenyellow;"/>
+        <center>
+            <div class="button">
+                <a href="Join.php" style="text-align:center; text-decoration:none; color:cornflowerblue; position:center;">Go to New join</a>
+            </div>
+        </center>
+
     </form>
 </BODY>
 </HTML>

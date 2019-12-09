@@ -51,7 +51,7 @@
 <BODY>
     <br/><br/>
     <form>
-        <a href="JNU wiki Homepage.html"><h1>JNU Wiki</h1></a>
+        <a href="Homepage.php"><h1>JNU Wiki</h1></a>
         <h2>New Join</h2><hr/>
         <div id="ID">
              <label>ID</label>
@@ -85,7 +85,7 @@
 </form>
     <center>
         <div class="button">
-            <a href="JNU wiki Homepage.html">Submit</a>
+            <a href="Homepage.php">Submit</a>
         </div>
     </center>
 

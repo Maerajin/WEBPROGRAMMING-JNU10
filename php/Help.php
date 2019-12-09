@@ -17,7 +17,7 @@
 </head>
 <body>
     <form> 
-        <a href="JNU wiki.html"><h1>JNU Wiki</h1></a>
+        <a href="Homepage.php"><h1>JNU Wiki</h1></a>
     </form>
     <hr />
     <h1>Help</h1><hr />
