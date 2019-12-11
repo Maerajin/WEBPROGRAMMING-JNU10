@@ -12,7 +12,7 @@
           <input type="button" value="Search" style="height: 30px;" />
     </div>
     <div id="big">
-        <a href="Homepage.php"><h1>JNU wiki</h1></a>
+        <a href="Homepage2.php"><h1>JNU wiki</h1></a>
     </div>
     <hr />
     <h1>Department of Computational Statistics</h1><hr />
