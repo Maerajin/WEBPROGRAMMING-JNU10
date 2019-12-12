@@ -1,11 +1,8 @@
 ﻿h1{
     color: green;
-    font-size: 4em;
+    font-size: 5em;
     text-align:center;
 }
-h6{
-    color: black;
-	}
 a{
     color: green;
     text-decoration:none;
@@ -15,7 +12,16 @@ a{
     text-align: center;
     margin-left: 10%;
 }
-#content{
+#content a{
     float: right;
-    
+    color: black;  
+    font-size: 1em;
+    text-decoration: none;  
+}
+.menus a{
+    font-size: 1em;
+    margin-left: 110px;
+    float: left;
+    text-align: center;
+    color: black;	
 }

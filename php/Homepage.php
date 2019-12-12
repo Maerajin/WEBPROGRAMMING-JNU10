@@ -13,9 +13,6 @@
         <a href="Join.php"> Join </a>
         <a href="Help.php"> Help </a>
     </div>
-    <div id="aside">
-        <a href="Homepage.php"><h1>JNU wiki</h1></a>
-    </div>
     <br />
     <br />
     <br />
