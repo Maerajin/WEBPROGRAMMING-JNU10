@@ -1,17 +1,121 @@
+<? 
+    session_start(); 
+?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN“ 
+  "http://www.w3.org/TR/html4/loose.dtd"> 
 <HTML>
 <HEAD>
-<meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
+<meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="css/jnujoin.css">
-<TITLE>JNU wiki Join</TITLE>
+<script>
+  function check_id()
+  { 
+    window.open("check_id.php?id=" +document.Join.id.value,"IDcheck",
+    "left=200,top=200,width=200,height=60,scrollbars=no, 
+    resizable=yes"); 
+  } 
+
+  function check_nick()
+  { 
+    window.open("check_nick.php?nick=" +document.Join.nick.value, 
+    "NICKcheck", "left=200,top=200,width=200,height=60, scrollbars=no, 
+    resizable=yes"); 
+  } 
+
+  function check_input()
+  { 
+    if(!document.Join.id.value) 
+    { 
+      alert("아이디를 입력하세요"); 
+      document.Join.id.focus(); 
+      return; 
+    } 
+
+    if(!document.Join.pw1.value)   
+    {    
+      alert("비밀번호를 입력하세요");     
+      document.Join.pw1.focus();      
+      return; 
+    }
+  
+    if(!document.Join.pw2.value)   
+    {    
+      alert("비밀번호확인을 입력하세요");     
+      document.Join.pw2.focus();      
+      return; 
+    }
+
+    if(!document.Join.name.value)   
+    {    
+      alert("이름을 입력하세요");     
+      document.Join.name.focus();      
+      return; 
+    }
+ 
+    if(!document.Join.nick.value)   
+    {    
+      alert("닉네임을 입력하세요");     
+      document.Join.nick.focus();      
+      return; 
+    }
+  
+    if(!document.Join.hp2.value || !document.Join.hp3.value)   
+    {    
+      alert("휴대폰 번호를 입력하세요");     
+      document.Join.nick.focus();      
+      return; 
+    }
+ 
+    if(!document.Join.year.value || !document.Join.month.value || !document.Join.day.value)    
+    {    
+      alert("생년월일을 입력하세요");     
+      document.Join.nick.focus();      
+      return; 
+    }
+
+    if (document.Join.pw1.value != 
+            document.Join.pw2.value)
+    {
+      alert("비밀번호가 일치하지 않습니다.\n다시 입력해주세요.");    
+      document.Join.pw1.focus();
+      document.Join.pw1.select();
+      return;
+    }
+      document.Join.submit();
+  }
+
+  function reset_form()
+   {
+      document.Join.id.value = "";
+      document.Join.pw1.value = "";
+      document.Join.pw2.value = "";
+      document.Join.name.value = "";
+      document.Join.nick.value = "";
+      document.Join.hp1.value = "010";
+      document.Join.hp2.value = "";
+      document.Join.hp3.value = "";
+      document.Join.year.value = "";
+      document.Join.month.value = "";
+      document.Join.day.value = "";
+	  
+      document.Join.id.focus();
+
+      return;
+   }
+</script>
+ <TITLE>JNU wiki Join</TITLE>
 </HEAD>
 <BODY>
     <br/><br/>
-    <form>
+    <form name="Join" method="post" action="insert.php">
         <a href="Homepage.php"><h1>JNU Wiki</h1></a>
         <h2>New Join</h2><hr/>
-        <div id="ID">
+        <div id="id1">
              <label>ID</label>
-             <input name="id" type="text" /><br/>
+             <input name="id" type="text" />
+        </div>
+        <div id="id2">    
+            <button type="button" onclick="check_id()">Check ID</a><br/>
         </div>
         <div id="pw1">
              <label>Password</label>
@@ -25,8 +129,28 @@
             <label>Name</label>
             <input name="name" type="text" /> <br />
         </div>
+        <div id="nick1">
+            <label>Nickname</label>
+            <input name="nick" type="text" /> 
+        </div>
+        <div id="nick2">
+            <button type="button" onclick="check_nick()">Check Nickname</a>
+        </div>
+        <div id="hp">
+        <label>Phone</label>
+        <select class="hp" name="hp1"> 
+              <option value='010'>010</option>
+              <option value='011'>011</option>
+              <option value='016'>016</option>
+              <option value='017'>017</option>
+              <option value='018'>018</option>
+              <option value='019'>019</option>
+        </select>  - 
+        <input type="text" class="hp" name="hp2" style="width:150px; height:30px;"/> - 
+        <input type="text" class="hp" name="hp3" style="width:150px; height:30px;"/>
+        </div>
         <div id="birth">
-            <label>Birth Day</label>
+            <label>Birth</label>
             <input name="year" type="text" placeholder="Year(4)" style="width:200px;" />
             <input name="month" type="text" placeholder="Month" style="width:70px" />
             <input name="day" type="text" placeholder="Day" style="width:70px" /><br />
@@ -38,12 +162,11 @@
             <input id="woman" type="radio" name="gender" value="w" style="width:100px; height:20px" ; />
             <label for="woman">Woman</label><br />
         </div>
-</form>
-    <center>
-        <div class="button">
-            <a href="Homepage.php">Submit</a>
-        </div>
-    </center>
-
+        <center>
+            <div class="button">
+                <button type="button" onclick="check_input()">Submit</a>
+            </div>
+        </center>
+    </form>
 </BODY>
 </HTML>

@@ -1,26 +1,78 @@
-<HTML>
-<HEAD>
-<meta http-equiv="Content-Type" Content="text/html"; charset="utf-8">
-<link rel="stylesheet" type="text/css" href="css/jnulogin.css">
-<TITLE>JNU wiki Login</TITLE>
-</HEAD>
-<BODY>
-    <br/><br/><br/><br/>
-    <a href="Homepage.php"><h1>JNU wiki</h1></a>
-    <h2>Login</h2>
-    <hr/>
-    <form>
-        <input name="id" type="text" placeholder="ID" style="width:500px; height:50px; border:3px solid blue; font-size:20px"/>
-        <br/>
-        <input name="pw" type="password" placeholder="Password" style="width:500px; height:50px; border:3px solid blue; font-size:20px"/>
-        <br/>
-        <input type="submit" value="Login" style="width:500px; height:30px; color:orangered; background-color:greenyellow;"/>
-        <center>
-            <div class="button">
-                <a href="Join.php" style="text-align:center; text-decoration:none; color:cornflowerblue; position:center;">Go to New join</a>
-            </div>
-        </center>
+﻿<?
+           session_start();
+?>
+<meta charset="utf-8">
+<?
+   // 이전화면에서 이름이 입력되지 않았으면 "이름을 입력하세요"
+   // 메시지 출력
+   if(!$id) {
+     echo("
+           <script>
+             window.alert('아이디를 입력하세요.')
+             history.go(-1)
+           </script>
+         ");
+         exit;
+   }
 
-    </form>
-</BODY>
-</HTML>
+   if(!$pass) {
+     echo("
+           <script>
+             window.alert('비밀번호를 입력하세요.')
+             history.go(-1)
+           </script>
+         ");
+         exit;
+   }
+
+   include "../dbconn.php";
+
+   $sql = "select * from Jmember where id='$id'";
+   $result = mysql_query($sql, $connect);
+
+   $num_match = mysql_num_rows($result);
+
+   if(!$num_match) 
+   {
+     echo("
+           <script>
+             window.alert('등록되지 않은 아이디입니다.')
+             history.go(-1)
+           </script>
+         ");
+    }
+    else
+    {
+        $row = mysql_fetch_array($result);
+
+        $db_pass = $row[pass];
+
+        if($pass != $db_pass)
+        {
+           echo("
+              <script>
+                window.alert('비밀번호가 틀립니다.')
+                history.go(-1)
+              </script>
+           ");
+
+           exit;
+        }
+        else
+        {
+           $userid = $row[id];
+		   $username = $row[name];
+		   $usernick = $row[nick];		 
+
+           $_SESSION['userid'] = $userid;
+           $_SESSION['username'] = $username;
+           $_SESSION['usernick'] = $usernick;
+
+           echo("
+              <script>
+                location.href = '../Homepage.php';
+              </script>
+           ");
+        }
+   }          
+
